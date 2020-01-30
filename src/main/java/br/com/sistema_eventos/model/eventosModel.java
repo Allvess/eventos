@@ -37,6 +37,16 @@ public class eventosModel {
     private LocalDate dataCriacao;
     @Column
     private Boolean ativo;
+    @Column
+    private  String imagem;
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
+    }
 
     public int getId() {
         return id;

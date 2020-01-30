@@ -2,24 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Lista livros</title>
 </head>
 <body>
-<h1>Cadastrado com sucesso. Veja a lista de eventos!</h1>
-
 <div th:each="evento : ${eventos}">
     <div>
-        <p><strong>Nome:</strong>
-            <a th:href="@{'/evento/' + ${evento.nome}}">
-                <span th:text="${evento.nome}"></span>
-            </a>
-        </p>
-
-        <br>
         <img th:src="${evento.imagem}" width="50%">
-        <br>
+        <p><strong>Nome:</strong> <span th:text="${evento.nome}"></span></p>
         <p>Tipo: <span th:text="${evento.tipo}"></span></p>
         <p>Data: <span th:text="${evento.data}"></span></p>
         <p>Inicio:<span th:text="${evento.horaInicio}"></span></p>
